@@ -35,6 +35,13 @@ class Fictionary < Formula
 
   def install
     bin.install "fictionary"
+    bash_completion.install "complete/fictionary.bash"
+    zsh_completion.install "complete/_fictionary"
+    fish_completion.install "complete/fictionary.fish"
+    man1.install "doc/fictionary.1"
+    pkgshare.install "data/american.fictionary"
+    pkgshare.install "data/british.fictionary"
+    pkgshare.install "data/english.fictionary"
   end
 
   test do
